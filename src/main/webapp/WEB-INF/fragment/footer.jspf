@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<footer class="footer">
+  <div class="container">
+    <p class="navbar-text">Dziennik treningowy - Karol Bednarczyk</p>
+  </div>
+</footer>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="resources/lib/bower/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<!-- bower:js script/all.js -->
+<script type="text/javascript" src="resources/lib/bower/angular/angular.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-grid/build/ng-grid.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-password/angular-password.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-localdate/dist/angular-localdate.min.js"></script>
+
+
+<script type="text/javascript" src="resources/lib/bower/angular-ui-grid/ui-grid.min.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-material/angular-material.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="resources/lib/bower/chart.js/dist/Chart.js"></script>
+<script type="text/javascript" src="resources/lib/bower/angular-chart.js/dist/angular-chart.js"></script>
+
+
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+ -->
+<!-- endbower:js script/all.js -->
+
+<!-- build:js script/all.js -->
+	<script src="script/alertMessages.js"></script>
+<!-- endbuild -->

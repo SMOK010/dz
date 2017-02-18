@@ -1,0 +1,322 @@
+<div class="row hidden" id ="actRow0">
+<hr>
+		<div class= "row" id="addSeries">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Partia:</label>
+						<label class="col-md-1 col-md-offset-1 control-label addTrainingBodyPart" ng-bind="bodyPart0.name"></label>
+						<label class="col-md-1 col-md-offset-1 control-label">Ćwiczenie:</label>
+						<label class="col-md-3 col-md-offset-1 control-label addTrainingExercise" ng-bind="exercise0.name">ćwiczenie</label>
+						
+					</div>
+					<div class= "row">
+						<button type="button" class="btn btn-default col-md-1 col-md-offset-1" id="addMoreSeriesButton0" ng-click="addMoreSeries0()" >Seria+</button>
+					</div>
+				<section class="hidden" id="seriesBlock00">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria1:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight00">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats00">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock01">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria2:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight01">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats01">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock02">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria3:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight02">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats02">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock03">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria4:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight03">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats03">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock04">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria5:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight04">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats04">
+					</div>
+				</section>
+				</div>
+				<!-- <div class="panel-footer">
+					<button type="button" class="btn btn-success" id="addSeriesConfirmButton">Potwierdź</button>
+				</div> -->
+			</div>
+		</div>
+</div>
+
+<div class="row hidden" id ="actRow1">
+<hr>
+		<div class= "row" id="addSeries">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Partia:</label>
+						<label class="col-md-1 col-md-offset-1 control-label addTrainingBodyPart" ng-bind="bodyPart1.name"></label>
+						<label class="col-md-1 col-md-offset-1 control-label">Ćwiczenie:</label>
+						<label class="col-md-3 col-md-offset-1 control-label addTrainingExercise" ng-bind="exercise1.name">ćwiczenie</label>
+						
+					</div>
+					<div class= "row">
+						<button type="button" class="btn btn-default col-md-1 col-md-offset-1" id="addMoreSeriesButton0" ng-click="addMoreSeries1()" >Seria+</button>
+					</div>
+				<section class="hidden" id="seriesBlock10">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria1:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight10">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats10">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock11">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria2:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight11">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats11">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock12">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria3:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight12">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats12">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock13">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria4:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight13">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats13">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock14">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria5:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight14">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats14">
+					</div>
+				</section>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="row hidden" id ="actRow2">
+<hr>
+		<div class= "row" id="addSeries">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Partia:</label>
+						<label class="col-md-1 col-md-offset-1 control-label addTrainingBodyPart" ng-bind="bodyPart2.name"></label>
+						<label class="col-md-1 col-md-offset-1 control-label">Ćwiczenie:</label>
+						<label class="col-md-3 col-md-offset-1 control-label addTrainingExercise" ng-bind="exercise2.name">ćwiczenie</label>
+						
+					</div>
+					<div class= "row">
+						<button type="button" class="btn btn-default col-md-1 col-md-offset-1" id="addMoreSeriesButton0" ng-click="addMoreSeries2()" >Seria+</button>
+					</div>
+				<section class="hidden" id="seriesBlock20">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria1:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight20">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats20">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock21">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria2:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight21">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats21">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock22">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria3:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight22">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats22">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock23">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria4:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight23">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats23">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock24">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria5:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight24">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats24">
+					</div>
+				</section>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="row hidden" id ="actRow3">
+<hr>
+		<div class= "row" id="addSeries">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Partia:</label>
+						<label class="col-md-1 col-md-offset-1 control-label addTrainingBodyPart" ng-bind="bodyPart3.name"></label>
+						<label class="col-md-1 col-md-offset-1 control-label">Ćwiczenie:</label>
+						<label class="col-md-3 col-md-offset-1 control-label addTrainingExercise" ng-bind="exercise3.name">ćwiczenie</label>
+						
+					</div>
+					<div class= "row">
+						<button type="button" class="btn btn-default col-md-1 col-md-offset-1" id="addMoreSeriesButton0" ng-click="addMoreSeries3()" >Seria+</button>
+					</div>
+				<section class="hidden" id="seriesBlock30">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria1:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight30">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats30">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock31">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria2:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight31">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats31">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock32">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria3:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight32">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats32">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock33">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria4:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight33">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats33">
+					</div>
+				</section>
+				<section class="hidden" id="seriesBlock34">
+					<div class= "row">
+						<label class="col-md-1 control-label" >Seria5:</label></div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label" >Ciężar:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingWeightSeries1" type="number" value="10" ng-model="weight34">
+					</div>
+					<div class= "row">
+						<label class="col-md-1 col-md-offset-1 control-label">Powtórzenia:</label>
+						<input class="col-md-1 col-md-offset-1 addTrainingRepeatsNumber1" type="number" value="10" ng-model="repeats34">
+					</div>
+				</section>
+				</div>
+			</div>
+		</div>
+</div>

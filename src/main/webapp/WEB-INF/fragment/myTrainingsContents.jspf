@@ -1,0 +1,202 @@
+<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="grid" ng-controller="trainingsListController">
+			    <div>
+			        <h3>Lista treningów</h3>
+			    </div>
+			    
+			
+			    <!-- Binds the grid component to be displayed. -->
+			    <div class="gridStyle" ng-grid="gridOptions"></div>
+				<span id="ctx" class="hidden" >${pageContext.request.userPrincipal.name}</span>
+			    
+			</div>
+			
+			
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+	<div ng-controller="monthCtrl">
+		<canvas id="bar" class="chart chart-bar"
+		  chart-data="data" chart-labels="labels" chart-options="chartOptions" chart-series="series">
+		</canvas>
+	</div>
+	
+	<div ng-controller="partCtrl">
+		<canvas id="bar" class="chart chart-bar"
+		  chart-data="data" chart-labels="labels" chart-options="chartOptions" chart-series="series">
+		</canvas>
+	</div>
+</div>
+
+<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="grid" ng-controller="trainingsListController">
+			    <div>
+			        <h3>Lista ćwiczeń</h3>
+			    </div>
+			    <div class="gridStyle col-md-6 col-sm-6 col-xs-6" ng-grid="gridActivitiesOptions">
+			    	
+			    </div>
+			    <div class="gridStyle col-md-6 col-sm-6 col-xs-6" ng-grid="gridActivitiesNOptions">
+			    	
+			    </div>
+				
+			</div>
+			
+</div>
+
+<%-- <div class="col-md-8 col-sm-8 col-xs-12">
+			<!-- Specify a Angular controller script that binds Javascript variables to the form.-->
+			<div class="form" ng-controller="trainingsFormController">
+			    <!-- Verify product, if there is no id present, that we are Adding a product -->
+			    <h1>Edytuj trening</h1>
+			
+			    <div>
+			        <!-- Specify the function to be called on submit and disable HTML5 validation, since we're using Angular validation-->
+			        <form name="trainingsForm" ng-submit="updateTraining()" novalidate id="addTrainingForm">
+			        <div class="row">
+			
+			            <!-- Display an error if the input is invalid and is dirty (only when someone changes the value) -->
+			            <div class="form-group col-md-12 col-xs-12" ng-class="{'has-error' : trainingsForm.id.$invalid && trainingsForm.id.$dirty}">
+			                <label for="id">Id:</label>
+			                <!-- Display a check when the field is valid and was modified -->
+			                <span ng-class="{'glyphicon glyphicon-ok' : trainingsForm.id.$valid && trainingsForm.id.$dirty}"></span>
+			
+			                <input id="id" name="id" type="text" class="form-control" maxlength="50" disabled
+			                       ng-model="training.id"
+			                       ng-minlength="1" ng-maxlength="50"/>
+			
+			               </div>
+			               <div class="validation-messages col-md-12 col-xs-12">
+			               	 <!-- Validation messages to be displayed on required, minlength and maxlength -->
+			                <p class="help-block" ng-show="trainingsForm.id.$error.required">Add Training.</p>
+			                <p class="help-block" ng-show="trainingsForm.id.$error.minlength">Training must be at least 1 characters long.</p>
+			                <p class="help-block" ng-show="trainingsForm.id.$error.maxlength">Training cannot be longer than 50 characters.</p>
+			            
+			               </div>
+			               
+			               <div class="form-group col-md-12 col-xs-12" ng-class="{'has-error' : trainingsForm.name.$invalid && trainingsForm.name.$dirty}">
+			                <label for="duration">Nazwa:</label>
+			                <!-- Display a check when the field is valid and was modified -->
+			                <span ng-class="{'glyphicon glyphicon-ok' : trainingsForm.name.$valid && trainingsForm.name.$dirty}"></span>
+			
+			                <input id="name" name="name" type="text" class="form-control" maxlength="30"
+			                       ng-model="training.name"
+			                       required ng-minlength="1" ng-maxlength="30" />
+			
+			               </div>
+			               <div class="validation-messages col-md-12 col-xs-12">
+			               	 <!-- Validation messages to be displayed on required, minlength and maxlength -->
+			                <p class="help-block" ng-show="trainingsForm.name.$error.required && trainingsForm.name.$dirty">Dodaj nazwę treningu.</p>
+			                <p class="help-block" ng-show="trainingsForm.name.$error.minlength">Nazwa treningu musi się składać co najmniej z jednego znaku</p>
+			                <p class="help-block" ng-show="trainingsForm.name.$error.maxlength">Nazwa nie może być dłuższa niż 30 znaków</p>
+			               </div>
+			               
+			               <!-- Display an error if the input is invalid and is dirty (only when someone changes the value) -->
+			            <div class="form-group col-md-12 col-xs-12" ng-class="{'has-error' : trainingsForm.description.$invalid && trainingsForm.description.$dirty}">
+			                <label for="description">Opis treningu:</label>
+			                <!-- Display a check when the field is valid and was modified -->
+			                <span ng-class="{'glyphicon glyphicon-ok' : trainingsForm.id.$valid && trainingsForm.id.$dirty}"></span>
+			
+			                <textarea id="description" name="description" type="text" class="form-control" maxlength="250" 
+			                       ng-model="training.description"
+			                       ng-minlength="0" ng-maxlength="250"></textarea>
+			
+			               </div>
+			               <div class="validation-messages col-md-12 col-xs-12">
+			               	 <!-- Validation messages to be displayed on required, minlength and maxlength -->
+			                <p class="help-block" ng-show="trainingsForm.description.$error.required">Add description.</p>
+			                <p class="help-block" ng-show="trainingsForm.description.$error.minlength">Description must be at least 1 characters long.</p>
+			                <p class="help-block" ng-show="trainingsForm.description.$error.maxlength">Description cannot be longer than 50 characters.</p>
+			            
+			               </div>
+			               
+			               <div class="form-group col-md-12 col-xs-12" ng-class="{'has-error' : trainingsForm.trainingDate.$invalid && trainingsForm.trainingDate.$dirty}">
+			                <label for="trainingDate">Data:</label>
+			                <span ng-class="{'glyphicon glyphicon-ok' : trainingsForm.trainingDate.$valid && trainingsForm.trainingDate.$dirty}"></span>
+			
+              				<span class="input-group-btn">
+				                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+				              </span>  
+			                       
+			                    <input id="trainingDate" name="trainingDate" type="date" class="form-control" maxlength="30"
+			                       ng-model="parseDate"
+			                       required placeholder="yyyy-MM-dd" min="2001-01-01"/>    
+							<!-- <pre>Selected date is: <em>{{training.trainingDate.year}} - {{training.trainingDate.month}} - {{training.trainingDate.dayOfMonth}}</em>
+  -->
+			               </div>
+			               <div class="validation-messages col-md-12 col-xs-12">
+			                <p class="help-block" ng-show="trainingsForm.trainingDate.$error.required && trainingsForm.trainingDate.$dirty">Add createTime.</p>
+			                <p class="help-block" ng-show="trainingsForm.trainingDate.$error.date">Not a valid date!</p>
+			               </div>
+			               
+			               <div class="form-group col-md-12 col-xs-12" ng-class="{'has-error' : trainingsForm.duration.$invalid && trainingsForm.duration.$dirty}">
+			                <label for="duration">Czas trwania:</label>
+			                <!-- Display a check when the field is valid and was modified -->
+			                <span ng-class="{'glyphicon glyphicon-ok' : trainingsForm.duration.$valid && trainingsForm.duration.$dirty}"></span>
+			
+			                <input id="duration" name="duration" type="number" class="form-control" maxlength="30"
+			                       ng-model="training.duration"
+			                       required ng-minlength="1" ng-maxlength="10" ng-min="1"/>
+			
+			               </div>
+			               <div class="validation-messages col-md-12 col-xs-12">
+			               	 <!-- Validation messages to be displayed on required, minlength and maxlength -->
+			                <p class="help-block" ng-show="trainingsForm.duration.$error.required && trainingsForm.age.$dirty">Add duration.</p>
+			                <p class="help-block" ng-show="trainingsForm.duration.$error.minlength">Duration must be at least 1 characters long.</p>
+			                <p class="help-block" ng-show="trainingsForm.duration.$error.maxlength">Duration cannot be longer than 50 characters.</p>
+			            	<p class="help-block" ng-show="trainingsForm.duration.$error.min">Duration must be higher</p>
+			               </div>
+			               
+			            <section ng-controller="bodyPartsController">
+			            	<!-- Rodzaj ćwiczenia -->
+			            	<div class="form-group col-md-12 col-xs-12">
+				                <label for="exerciseType">Rodzaj:</label>
+				
+				                <select class="selectList" ng-options="v for (k,v) in options"
+			                		ng-model="exerciseType" ng-change="changeExerciseType(exerciseType)" id="type" >
+			                </select>
+			                </div>
+			                <!-- Wybór partii -->
+			            	<div id = "bodyPartDiv" class="form-group col-md-12 col-xs-12 hidden">
+				                <label for="bodyPart">Partia:</label>
+				
+				                <select class="selectList" ng-options="item as item.name for item in bodyParts" 
+				                		ng-model="bodyPart" ng-change="changeBodyPart(bodyPart)" class="" id="bodyPart" 
+				                		ng-init="loadBodyPartsOptions()" >
+				                </select>
+			                </div>
+			                <!-- Wybór ćwiczenia -->
+			                <div class="form-group col-md-12 col-xs-12">
+				                <label for="exercise">Ćwiczenie:</label>
+				
+				                <select class="selectList" ng-options="item as item.name for item in bodyPart.exercises" 
+				                		ng-model="exercise" ng-change="changeExercise(exercise)" id="exercise" 
+				                		ng-init="loadBodyPartsOptions()" >
+				                </select>
+			                </div>
+			                
+			                
+			                <div class= "buttons col-md-12 col-xs-12" >
+			                <!-- <button type="button" class="btn btn-default col-md-2 col-md-offset-1" id="testButton" ng-click="refreshGrid()"  >Dodaj ćwiczenie</button>
+							 -->	
+							 <div class = "col-md-2 col-md-offset-1">
+								<button type="button" class="btn btn-default" id="addMoreExerciseButton" ng-click="addNextExerciseCl()"  >Dodaj ćwiczenie</button>
+							 </div>	
+							 <div class = "col-md-2 col-md-offset-1">
+								<button type="button" class="btn btn-primary" ng-click="updateTraining2()">Zapisz i kontynuuj</button>
+							 </div>
+							 <div class = "col-md-2 col-md-offset-1">	
+								<button type="submit" class="btn btn-primary"  ng-disabled="trainingsForm.$invalid">Zapisz i zakończ</button>
+							 </div>
+							</div>
+							</section>
+			                
+			            </div>
+			            
+			            <!-- póxniej ogarnie się reszte updatu treningu -->
+			            <jsp:include page="/WEB-INF/fragment/moreExercisesContents.jspf"></jsp:include>
+			            
+			        </form>
+				</div> 
+			</div>
+</div> --%>
+			       

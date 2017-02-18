@@ -1,0 +1,36 @@
+<div id = "menuVertical" class="col-md-4 col-sm-4 col-xs-12">
+	<ul class="nav nav-pills nav-stacked">
+		<li role="presentation" class="active"><a href="${pageContext.request.contextPath}/myTrainings">Moje Treningi</a></li>
+		<li role="presentation"><a href="${pageContext.request.contextPath}/addTraining">Dodaj trening</a></li>
+		<li role="presentation"><a href="${pageContext.request.contextPath}/helpMyTrainings">Pomoc</a></li>
+	</ul>
+	
+	
+	<div id="defaultTraining" class="hidden" ng-controller="trainingDefaultController">
+			                
+			                <div class="form-group col-md-12 col-xs-12">
+				                <label for="defaultTraining">Trening:</label>
+				
+				                <select class="selectList" ng-options="item as item.name for item in trainingsDefault" 
+				                		ng-model="trainingDefault" ng-change="changeTraining(trainingDefault)" id="exercise" 
+				                		ng-init="loadTrainingsDefaultOptions()" >
+				                </select>
+			                </div>
+			                
+			                <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="grid" ng-controller="trainingsListController">
+								    <div>
+								        <h3>Lista ćwiczeń</h3>
+								    </div>
+								    <div class="gridStyle col-md-12 col-sm-12 col-xs-12" ng-grid="gridDefaultActivitiesOptions">
+								    	
+								    </div>
+								    <!-- <div class="gridStyle col-md-12 col-sm-12 col-xs-12" ng-grid="gridDefaultActivitiesNOptions">
+								    	
+								    </div> -->
+									
+								</div>
+								
+							</div>
+			       </div>
+</div>

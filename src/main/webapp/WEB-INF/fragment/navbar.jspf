@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<nav class = "navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a href="${pageContext.request.contextPath}" class="navbar-brand">Dziennik</a>
+         
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="glyphicon glyphicon-list"></span>
+        </button>
+         
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="${pageContext.request.contextPath}">Główna</a></li>
+            <li><a href="${pageContext.request.contextPath}/myTrainings">Moje Treningi</a></li>
+            <li><a href="${pageContext.request.contextPath}/kontakt">Kontakt</a></li>
+            <c:choose>
+                <c:when test="${not empty sessionScope.user}">
+                    <li><a href="${pageContext.request.contextPath}/logout">Wyloguj się</a></li>
+                </c:when>
+                <c:otherwise>
+                    <li><a href="${pageContext.request.contextPath}/login">Zaloguj się</a></li>
+                    <li><a href="${pageContext.request.contextPath}/register">Rejestracja</a></li>
+                </c:otherwise>
+            </c:choose>
+            <c:if test="${not empty pageContext.request.userPrincipal}">
+				<c:if test="${pageContext.request.isUserInRole('user')}">
+				<li> 
+					<div class="dropdown dropDiv" id="dropDivUser" >
+			         	<button class="btn btn-default dropdown-toggle marg" type="button" id="userPanel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    ${pageContext.request.userPrincipal.name} - Profil
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="userPanel">
+						    <li><a href="${pageContext.request.contextPath}/register">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+			         </div>
+				 </li> 
+			    </c:if>
+			</c:if>
+			
+			<c:if test="${not empty pageContext.request.userPrincipal}">
+				<c:if test="${pageContext.request.isUserInRole('trainer')}">
+				<li> 
+					<div class="dropdown dropDiv" id="dropDivUser" >
+			         	<button class="btn btn-default dropdown-toggle marg" type="button" id="trainerPanel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    ${pageContext.request.userPrincipal.name} - Panel trenera
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="trainerPanel">
+						    <li><a href="${pageContext.request.contextPath}/addExMain">Stwórz ćwiczenie</a></li>
+						    <li><a href="${pageContext.request.contextPath}/addTrainingTrainer">Dodaj trening wzorcowy</a></li>
+						    
+						    <li><a href="#">Another action</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+			         </div>
+				 </li> 
+			    </c:if>
+			</c:if>
+			
+            <c:if test="${not empty pageContext.request.userPrincipal}">
+				<c:if test="${pageContext.request.isUserInRole('admin')}">
+				<li>
+					<div class="dropdown dropDiv" id="dropDivAdmin">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="adminPanel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    ${pageContext.request.userPrincipal.name} - Panel admina
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="adminPanel">
+					  	<li><a href="${pageContext.request.contextPath}/adminUsers">Użytkownicy</a></li>
+					  	<li><a href="${pageContext.request.contextPath}/adminRegisterUsers">Rejestracja użytkowników</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="${pageContext.request.contextPath}/adminExercise">Stwórz ćwiczenie</a></li>
+					  </ul>
+					</div>
+					</li>
+			    </c:if>
+			</c:if>
+          </ul>
+        </div>
+         
+      </div>
+    </nav>
+    
+    <!-- Specify a Angular controller script that binds Javascript variables to the feedback messages.-->
+<div class="message" ng-controller="alertMessagesController">
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
